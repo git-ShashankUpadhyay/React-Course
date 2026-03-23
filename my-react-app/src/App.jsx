@@ -1,19 +1,16 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Card from "./Card";
+import Card from './card/Card';
 
 function App() {
-  return(
-    <>
-        {/* <Header /> */}
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        { /* <Footer  /> */}
-    </>
+  const cards = Array.from({ length: 1 }); // [undefined, undefined, undefined, undefined]
 
-  )
+  return (
+    <div className="cards-list">
+      {cards.map(() => <Card/>
+      )}
+    </div>
+  );
 }
 
-export default App
+export default App;
